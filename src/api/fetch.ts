@@ -1,5 +1,6 @@
+/* 如果请求失败，请更换地址 */
 const baseUrl = "https://api.mocksys.com/api/v1/mock/20071";
-const localUrl = "http://localhost:8079";
+const localUrl = "http://localhost:8079"; //对于koa服务监听的地址
 const getUrl = (url: string) => {
   return `${localUrl}${url}`;
 };
