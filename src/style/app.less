@@ -1,0 +1,40 @@
+#root {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.router-container {
+    .flex-space-around();
+    width: 800px;
+    margin: 0 auto;
+    gap: 10px;
+    padding: 20px 0;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-wrapper {
+    margin-left: -80px;
+}
+
+.lists-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+
+    .card-content {
+        .flex-space-around();
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import Fetch from "./api/fetch";
+import { Link } from "react-router-dom";
+/* import Fetch from "./api/fetch";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -30,9 +31,12 @@ function App() {
     </div>
   );
 }
-
-Fetch.get("/fetchPost").then((data) => {
-  console.log(data);
-});
-
-export default App;
+export default App; */
+export default function App() {
+  return (
+    <div className="router-container">
+      <Link to="/index">搜索列表</Link>
+      <Link to="/about">备用</Link>
+    </div>
+  );
+}

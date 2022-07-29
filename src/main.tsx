@@ -1,6 +1,7 @@
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 /* import "antd/dist/antd.css"; */
+import "./style/app.less";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import routes from "./router";

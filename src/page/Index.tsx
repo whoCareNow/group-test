@@ -1,9 +1,9 @@
-import { Button } from "antd";
+import Search from "../components/search";
 
 export default function Index() {
   return (
-    <div>
-      <Button type="primary">Index</Button>
+    <div className="wrapper">
+      <Search />
     </div>
   );
 }

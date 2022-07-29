@@ -1,15 +1,15 @@
 /* 如果请求失败，请更换地址 */
 const baseUrl = "https://api.mocksys.com/api/v1/mock/20071";
 const localUrl = "http://localhost:8079"; //对于koa服务监听的地址
-const getUrl = (url: string) => {
-  return `${localUrl}${url}`;
+const getUrl = (url: string, method?: string) => {
+  return `${baseUrl}/${method}/${url}`;
 };
 export default async function Fetch(
   url: string,
   data = {},
   method: string = "GET"
 ) {
-  url = getUrl(url);
+  url = getUrl(url, method.toLowerCase());
   method = method.toUpperCase();
   if (method === "POST") {
     try {
@@ -44,7 +44,7 @@ export default async function Fetch(
 }
 
 Fetch.get = async (url: string) => {
-  url = getUrl(url);
+  url = getUrl(url, "get");
   try {
     const res = await fetch(url, {
       headers: {
@@ -61,7 +61,7 @@ Fetch.get = async (url: string) => {
 };
 
 Fetch.post = async (url: string, data = {}) => {
-  url = getUrl(url);
+  url = getUrl(url, "post");
   try {
     const res = await fetch(url, {
       headers: {

@@ -3,10 +3,10 @@ import react from "@vitejs/plugin-react";
 import vitePluginImp from "vite-plugin-imp";
 import path from "path";
 import fs from "fs";
-const lessToJS = require("less-vars-to-js");
+/* const lessToJS = require("less-vars-to-js");
 const themeVariables = lessToJS(
   fs.readFileSync(path.resolve(__dirname, "./config/variables.less"), "utf8")
-);
+); */
 
 const env = process.argv[process.argv.length - 1];
 /* const base = config[env]; */
@@ -37,7 +37,7 @@ export default defineConfig({
         // 支持内联 JavaScript
         javascriptEnabled: true,
         // 重写 less 变量，定制样式
-        modifyVars: themeVariables,
+        /* modifyVars: themeVariables, */
       },
     },
   },
