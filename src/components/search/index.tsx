@@ -1,11 +1,10 @@
-import { Input, Radio, RadioChangeEvent, Select } from "antd";
+import { Input, Radio, RadioChangeEvent } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Fetch from "../../api/fetch";
 import { SearchEvent } from "../../type/Event";
 import _, { iteratee } from "lodash";
 import { userInfo } from "../../type/Data";
 import List from "./List";
-import Item from "antd/lib/list/Item";
 const init: () => Promise<userInfo[]> = async () => {
   const res = await Fetch.get("getuser");
   if (res.message === "success") return res.data;
